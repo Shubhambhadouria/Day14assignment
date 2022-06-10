@@ -10,13 +10,14 @@ public class UserRegistration {
 	String userCountry;
 
 	void registerUser(String username,String userCountry) throws InvalidCountryException{
-		if(userCountry!="India")
+		if(userCountry.equalsIgnoreCase("India"))
 		{
-			throw new InvalidCountryException("User Outside India cannot be registered");
+			System.out.println("User registration done successfully");
+			
 		}
 		else
 		{
-			System.out.println("User registration done successfully");
+			throw new InvalidCountryException("User Outside India cannot be registered");
 			
 		}
 	
